@@ -27,13 +27,13 @@ View(gutenberg_metadata)
 
 
 # ----- Mark Twain books -----
-# Top 10 books list: https://www.publishersweekly.com/pw/by-topic/industry-news/tip-sheet/article/64432-the-10-best-mark-twain-books.html
 twain_books <- gutenberg_metadata %>%
   filter(author == "Twain, Mark", has_text == TRUE) %>%
   select(gutenberg_id, author, title)
 
 View(twain_books)
 
+# Top 10 books list: https://www.publishersweekly.com/pw/by-topic/industry-news/tip-sheet/article/64432-the-10-best-mark-twain-books.html
 # pick 6 popular books identified by gutenberg_id
 gutenberg_metadata %>%
   filter(gutenberg_id %in% c(74, 76, 86, 245, 1837, 3177)) %>%
