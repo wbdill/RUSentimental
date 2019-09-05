@@ -4,11 +4,13 @@
 
 #install.packages("tidyverse")
 #install.packages("tidytext")    # text mining
-#install.packages("gutenbergr")  # project Gutenberg book downloads
+install.packages("gutenbergr")  # project Gutenberg book downloads
+install.packages("textdata")
 
 library(tidyverse)
 library(tidytext)    # text mining
 library(gutenbergr)  # Project Gutenberg downloadable books.  gutenberg_metadata to view index
+library(textdata)
 #-------------------------------------------------------------------------------
 rm(list = ls())
 
