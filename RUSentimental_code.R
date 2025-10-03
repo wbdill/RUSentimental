@@ -2,7 +2,7 @@
 # Personal cheatsheet: http://briandill.com/R/
 #-------------------------------------------------------------------------------
 
-#install.packages("tidyverse")
+install.packages("tidyverse")
 #install.packages("tidytext")    # text mining
 #install.packages("gutenbergr")  # project Gutenberg book downloads
 #install.packages("textdata")
@@ -54,7 +54,8 @@ head(twain_book_data, 15)
 # add line numbers 1-N for each book
 twain_book_data <- twain_book_data %>%
   group_by(gutenberg_id) %>%
-  mutate(linenum = row_number())
+  mutate(linenum = row_number()) %>% 
+  ungroup()
 
 # tokenize to one word per row (tidytext package)
 twain_tokens <- twain_book_data %>%
